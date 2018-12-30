@@ -1,0 +1,7 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  stdafx.cpp
+cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  SaleSystem1.cpp
+  SaleSystem1Dlg.cpp
+  正在生成代码...
+  SaleSystem1.vcxproj -> C:\Users\高杰\source\repos\SaleSystem1\Debug\SaleSystem1.exe

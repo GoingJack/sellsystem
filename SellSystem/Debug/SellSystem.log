@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(SaleSystem1.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  Connect2Database.cpp
+  SellSystem.vcxproj -> C:\Users\高杰\source\repos\SellSystem\Debug\SellSystem.exe
