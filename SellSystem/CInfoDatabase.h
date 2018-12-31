@@ -11,7 +11,15 @@ struct msg
 	int id;
 	char name[255];
 	double price;
-	int num;
+	int num;//库存
+	int pnum;//购买的个数
+	double totalprice;//单条信息总价格
+
+};
+struct msg_order//为了写入数据库
+{
+	char name[255];
+	
 };
 class CInfoDatabase
 {

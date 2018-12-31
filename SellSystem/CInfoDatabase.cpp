@@ -25,7 +25,7 @@ void CInfoDatabase::ReadDocline()
 	mysqlCon = con.getconnect();
 
 	CString select_sql_by_product;
-	select_sql_by_product.Format("SELECT C_Name,C_Price,ware_Count  from commodity,warehouse WHERE commodity.C_Id=warehouse.C_Id");
+	select_sql_by_product.Format("SELECT C_Name,C_Price,ware_Count,commodity.C_Id  from commodity,warehouse WHERE commodity.C_Id=warehouse.C_Id");
 	mysql_query(&mysqlCon, "set names utf8");
 	int ress = mysql_query(&mysqlCon, (char*)(LPCSTR)select_sql_by_product);
 	if (ress == 0)
@@ -56,6 +56,9 @@ void CInfoDatabase::ReadDocline()
 				char tmp_num[20];
 				sprintf(tmp_num, "%s", row[2]);
 				tmp.num=atoi(tmp_num);//将商品的库存赋值给结构体
+				//商品id赋值
+				sprintf(tmp_num, "%s", row[3]);
+				tmp.id = atoi(tmp_num);//将商品的库存赋值给结构体
 				//添加进容器
 				ls.push_back(tmp);
 				//MessageBox((CString)wszString);
