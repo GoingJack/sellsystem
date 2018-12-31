@@ -185,9 +185,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CDisplayView.h" />
+    <ClInclude Include="CInfoDatabase.h" />
     <ClInclude Include="CLogin.h" />
     <ClInclude Include="Connect2Database.h" />
     <ClInclude Include="CSelectView.h" />
+    <ClInclude Include="CUserBuy.h" />
     <ClInclude Include="CUserDlg.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="MainFrm.h" />
@@ -201,9 +203,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CDisplayView.cpp" />
+    <ClCompile Include="CInfoDatabase.cpp" />
     <ClCompile Include="CLogin.cpp" />
     <ClCompile Include="Connect2Database.cpp" />
     <ClCompile Include="CSelectView.cpp" />
+    <ClCompile Include="CUserBuy.cpp" />
     <ClCompile Include="CUserDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="SellSystem.cpp" />

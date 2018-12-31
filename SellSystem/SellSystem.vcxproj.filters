@@ -57,6 +57,12 @@
     <ClInclude Include="Connect2Database.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CUserBuy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CInfoDatabase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SellSystem.cpp">
@@ -87,6 +93,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Connect2Database.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CUserBuy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CInfoDatabase.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

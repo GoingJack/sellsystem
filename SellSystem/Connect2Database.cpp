@@ -14,8 +14,8 @@ Connect2Database::~Connect2Database()
 MYSQL Connect2Database::getconnect()
 {
 	const char user[] = "root";
-	const char pswd[] = "Gj1312159064.";
-	const char host[] = "120.77.203.15";
+	const char pswd[] = "1";
+	const char host[] = "127.0.0.1";
 	const char table[] = "sellSystem";
 	unsigned int port = 3306;
 	
