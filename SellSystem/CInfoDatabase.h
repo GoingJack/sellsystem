@@ -8,7 +8,7 @@
 using namespace std;
 struct msg
 {
-	int id;
+	int id;//商品的编号
 	char name[255];
 	double price;
 	int num;//库存
@@ -19,7 +19,15 @@ struct msg
 struct msg_order//为了写入数据库
 {
 	char name[255];
-	
+};
+struct ordersystem//订单信息表
+{
+	char Username[40];//订单发起者名字;
+	char Order_Id[20];
+	int Cu_Id;
+	char Order_Date[20];
+	int Order_Status;
+	double Order_Totalprice;
 };
 class CInfoDatabase
 {
@@ -31,5 +39,7 @@ public:
 	void ReadDocline();
 
 	list<msg> ls;//存储商品容器
+	list<ordersystem> order;//订单信息
+	void ReadInfo_Order();
 };
 

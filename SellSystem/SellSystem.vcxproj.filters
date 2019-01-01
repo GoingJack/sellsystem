@@ -63,6 +63,9 @@
     <ClInclude Include="CInfoDatabase.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CSellerDeal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SellSystem.cpp">
@@ -101,6 +104,9 @@
     <ClCompile Include="CInfoDatabase.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CSellerDeal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SellSystem.rc">
@@ -129,6 +135,9 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\buy.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\deal.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

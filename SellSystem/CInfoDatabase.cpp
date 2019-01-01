@@ -67,3 +67,76 @@ void CInfoDatabase::ReadDocline()
 		}
 	}
 }
+void CInfoDatabase::ReadInfo_Order()
+{
+	ordersystem tmp;//存放订单信息结构体
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	Connect2Database con;
+	Connect2Database con1;
+	MYSQL mysqlCon;
+	mysqlCon = con.getconnect();
+
+	CString select_sql_by_order;
+	select_sql_by_order.Format("SELECT Order_Id,Cu_Id,Order_Date,Order_Status,Order_Totalprice FROM ordersystem WHERE Order_Status=0");
+	mysql_query(&mysqlCon, "set names utf8");
+	int ress = mysql_query(&mysqlCon, (char*)(LPCSTR)select_sql_by_order);
+	if (ress == 0)
+	{
+		//MessageBox("查找成功");
+		res = mysql_store_result(&mysqlCon);
+		if (mysql_num_rows(res) == 0) //查询结果为空
+		{
+			MessageBox(NULL, "提示消息", "目前系统无未处理的订单\n", 0);
+		}
+		else
+		{
+			char szBuffer[1024];
+			//CString wszString;
+			while (row = mysql_fetch_row(res))
+			{
+				sprintf(szBuffer, "%s", row[0]);
+				int wcsLen = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
+				wchar_t* wszString = new wchar_t[wcsLen + 1];
+				MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), wszString, wcsLen);
+				wszString[wcsLen] = '\0';
+				WideCharToMultiByte(CP_ACP, 0, wszString, -1, tmp.Order_Id, sizeof(tmp.Order_Id), NULL, NULL);//将商品名字赋值给结构体
+				
+				tmp.Cu_Id = atoi(row[1]);
+
+				sprintf(szBuffer, "%s", row[2]);
+				int wcsLen1 = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
+				wchar_t* wszString1 = new wchar_t[wcsLen1 + 1];
+				MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), wszString1, wcsLen1);
+				wszString1[wcsLen1] = '\0';
+				WideCharToMultiByte(CP_ACP, 0, wszString1, -1, tmp.Order_Date, sizeof(tmp.Order_Date), NULL, NULL);
+
+				tmp.Order_Status = atoi(row[3]);
+				
+				charToDouble(row[4], tmp.Order_Totalprice);
+
+				//添加到结构体名字
+				CString sql_query_username;
+				MYSQL mysqlCon1;
+				mysqlCon1 = con1.getconnect();
+				MYSQL_ROW row1;
+				sql_query_username.Format("SELECT Username FROM user_info WHERE UserId=%d",atoi(row[1]));
+				if (mysql_query(&mysqlCon1, (char*)(LPCSTR)sql_query_username) == 0)
+				{
+					row1 = mysql_fetch_row(mysql_store_result(&mysqlCon1));
+					//MessageBox(NULL, "sfs", (CString)row1[0], 0);
+					sprintf(szBuffer, "%s", row1[0]);
+					int wcsLen2 = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
+					wchar_t* wszString2 = new wchar_t[wcsLen2 + 1];
+					MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), wszString2, wcsLen2);
+					wszString2[wcsLen2] = '\0';
+					WideCharToMultiByte(CP_ACP, 0, wszString2, -1, tmp.Username, sizeof(tmp.Username), NULL, NULL);
+				}
+				//添加进容器
+				order.push_back(tmp);
+				//MessageBox((CString)wszString);
+				delete wszString;
+			}
+		}
+	}
+}
