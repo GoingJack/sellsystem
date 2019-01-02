@@ -6,5 +6,6 @@ public:
 	Connect2Database();
 	~Connect2Database();
 	MYSQL getconnect();
+	void closeconnect(MYSQL *mysqlCon);
 };
 

@@ -28,3 +28,7 @@ MYSQL Connect2Database::getconnect()
 	}
 	return mysqlCon;
 }
+void Connect2Database::closeconnect(MYSQL *mysqlCon)
+{
+	mysql_close(mysqlCon);
+}

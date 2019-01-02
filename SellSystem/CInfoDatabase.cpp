@@ -66,8 +66,10 @@ void CInfoDatabase::ReadDocline()
 			}
 		}
 	}
+	//mysql_close(&mysqlCon);
+	
 }
-void CInfoDatabase::ReadInfo_Order()
+void CInfoDatabase::ReadInfo_Order()//查询订单
 {
 	ordersystem tmp;//存放订单信息结构体
 	MYSQL_RES *res;
@@ -87,7 +89,7 @@ void CInfoDatabase::ReadInfo_Order()
 		res = mysql_store_result(&mysqlCon);
 		if (mysql_num_rows(res) == 0) //查询结果为空
 		{
-			MessageBox(NULL, "提示消息", "目前系统无未处理的订单\n", 0);
+			MessageBox(NULL, "目前系统无未处理的订单\n", "提示消息",  0);
 		}
 		else
 		{
@@ -139,4 +141,5 @@ void CInfoDatabase::ReadInfo_Order()
 			}
 		}
 	}
+	//mysql_close(&mysqlCon);
 }
