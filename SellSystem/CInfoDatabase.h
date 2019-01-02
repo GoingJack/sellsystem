@@ -14,6 +14,7 @@ struct msg
 	int num;//库存
 	int pnum;//购买的个数
 	double totalprice;//单条信息总价格
+	double IPrice;//进价
 
 };
 struct msg_order//为了写入数据库
