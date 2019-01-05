@@ -41,6 +41,9 @@ public:
 
 	list<msg> ls;//存储商品容器
 	list<ordersystem> order;//订单信息
+	list<msg> Info_commodity;//管理员查看消息容器
 	void ReadInfo_Order();
+
+	void ReadInfo_Commodity();
 };
 

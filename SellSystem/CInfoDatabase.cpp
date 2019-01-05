@@ -142,3 +142,55 @@ void CInfoDatabase::ReadInfo_Order()//查询订单
 	}
 	//mysql_close(&mysqlCon);
 }
+void CInfoDatabase::ReadInfo_Commodity()
+{
+	msg tmp;//存放订单信息结构体
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	Connect2Database con;
+	MYSQL mysqlCon;
+	mysqlCon = con.getconnect();
+
+	CString select_sql_by_view;
+	select_sql_by_view.Format("SELECT * FROM commodity_show");
+	mysql_query(&mysqlCon, "set names utf8");
+	int ress = mysql_query(&mysqlCon, (char*)(LPCSTR)select_sql_by_view);
+
+
+
+	if (ress == 0)
+	{
+		//MessageBox("查找成功");
+		res = mysql_store_result(&mysqlCon);
+		if (mysql_num_rows(res) == 0) //查询结果为空
+		{
+			MessageBox(NULL, "目前无任何商品信息", "提示消息", 0);
+		}
+		else
+		{
+			char szBuffer[1024];
+			//CString wszString;
+			while (row = mysql_fetch_row(res))
+			{
+				sprintf(szBuffer, "%s", row[0]);
+				int wcsLen = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
+				wchar_t* wszString = new wchar_t[wcsLen + 1];
+				MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), wszString, wcsLen);
+				wszString[wcsLen] = '\0';
+				WideCharToMultiByte(CP_ACP, 0, wszString, -1, tmp.name, sizeof(tmp.name), NULL, NULL);//将商品名字赋值给结构体
+
+
+				charToDouble(row[1], tmp.price);
+				tmp.num = atoi(row[2]);
+				charToDouble(row[3], tmp.IPrice);
+
+				//添加进容器
+				Info_commodity.push_back(tmp);
+				//MessageBox((CString)wszString);
+				delete wszString;
+			}
+		}
+	}
+	//mysql_close(&mysqlCon);
+
+}
