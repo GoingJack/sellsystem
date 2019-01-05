@@ -19,12 +19,12 @@ MYSQL Connect2Database::getconnect()
 	const char table[] = "sellSystem";
 	unsigned int port = 3306;
 	
-
 	MYSQL mysqlCon;
 	mysql_init(&mysqlCon);
 	if (!mysql_real_connect(&mysqlCon, host, user, pswd, table, port, NULL, 0))
 	{
 		AfxMessageBox(_T("∑√Œ  ˝æ›ø‚ ß∞‹!"));
+
 	}
 	return mysqlCon;
 }

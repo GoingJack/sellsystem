@@ -191,6 +191,7 @@
     <ClInclude Include="Connect2Database.h" />
     <ClInclude Include="CSelectView.h" />
     <ClInclude Include="CSellerDeal.h" />
+    <ClInclude Include="CShow.h" />
     <ClInclude Include="CUserBuy.h" />
     <ClInclude Include="CUserDlg.h" />
     <ClInclude Include="global.h" />
@@ -211,6 +212,7 @@
     <ClCompile Include="Connect2Database.cpp" />
     <ClCompile Include="CSelectView.cpp" />
     <ClCompile Include="CSellerDeal.cpp" />
+    <ClCompile Include="CShow.cpp" />
     <ClCompile Include="CUserBuy.cpp" />
     <ClCompile Include="CUserDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -233,6 +235,7 @@
   <ItemGroup>
     <Image Include="res\buy.ico" />
     <Image Include="res\deal.ico" />
+    <Image Include="res\goodinfo.ico" />
     <Image Include="res\goods.ico" />
     <Image Include="res\icon1.ico" />
     <Image Include="res\main.ico" />

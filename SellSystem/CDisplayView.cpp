@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "SellSystem.h"
 #include "CDisplayView.h"
-
+#include "CLogin.h"
 
 // CDispalyView
 
@@ -47,3 +47,4 @@ void CDisplayView::Dump(CDumpContext& dc) const
 
 
 // CDispalyView 消息处理程序
+

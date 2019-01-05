@@ -77,7 +77,6 @@ void CInfoDatabase::ReadInfo_Order()//查询订单
 	MYSQL_RES *res;
 	MYSQL_ROW row;
 	Connect2Database con;
-	Connect2Database con1;
 	MYSQL mysqlCon;
 	mysqlCon = con.getconnect();
 
@@ -121,13 +120,11 @@ void CInfoDatabase::ReadInfo_Order()//查询订单
 
 				//添加到结构体名字
 				CString sql_query_username;
-				MYSQL mysqlCon1;
-				mysqlCon1 = con1.getconnect();
 				MYSQL_ROW row1;
 				sql_query_username.Format("SELECT Username FROM user_info WHERE UserId=%d",atoi(row[1]));
-				if (mysql_query(&mysqlCon1, (char*)(LPCSTR)sql_query_username) == 0)
+				if (mysql_query(&mysqlCon, (char*)(LPCSTR)sql_query_username) == 0)
 				{
-					row1 = mysql_fetch_row(mysql_store_result(&mysqlCon1));
+					row1 = mysql_fetch_row(mysql_store_result(&mysqlCon));
 					//MessageBox(NULL, "sfs", (CString)row1[0], 0);
 					sprintf(szBuffer, "%s", row1[0]);
 					int wcsLen2 = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
