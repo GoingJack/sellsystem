@@ -122,7 +122,7 @@ void CInfoDatabase::ReadInfo_Order(int status)//查询订单
 				//添加到结构体名字
 				CString sql_query_username;
 				MYSQL_ROW row1;
-				sql_query_username.Format("SELECT Username FROM user_info WHERE UserId=%d",atoi(row[1]));
+				sql_query_username.Format("SELECT Username FROM user_info WHERE UserId=%d ",atoi(row[1]));
 				if (mysql_query(&mysqlCon, (char*)(LPCSTR)sql_query_username) == 0)
 				{
 					row1 = mysql_fetch_row(mysql_store_result(&mysqlCon));
@@ -141,12 +141,17 @@ void CInfoDatabase::ReadInfo_Order(int status)//查询订单
 					MYSQL_ROW row2;
 					char tmpforseller[20];
 					sprintf(tmpforseller, "%s", row[5]);
-					sql_query_seller.Format("SELECT Username FROM user_seller WHERE S_Id=%d", atoi(row[5]));
+					sql_query_seller.Format("SELECT Username FROM user_seller WHERE S_Id=%d",atoi(row[5]));
 					if (mysql_query(&mysqlCon, (char*)(LPCSTR)sql_query_seller) == 0)
 					{
 						row2 = mysql_fetch_row(mysql_store_result(&mysqlCon));
 						//MessageBox(NULL, "sfs", (CString)row1[0], 0);
 						sprintf(tmp.Order_dealer, "%s", row2[0]);
+						/*int wcsLen2 = MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), NULL, 0);
+						wchar_t* wszString2 = new wchar_t[wcsLen2 + 1];
+						MultiByteToWideChar(CP_UTF8, 0, szBuffer, strlen(szBuffer), wszString2, wcsLen2);
+						wszString2[wcsLen2] = '\0';
+						WideCharToMultiByte(CP_ACP, 0, wszString2, -1, tmp.Order_dealer, sizeof(tmp.Order_dealer), NULL, NULL);*/
 					}
 
 				}
