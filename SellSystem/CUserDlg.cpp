@@ -5,6 +5,7 @@
 #include "Connect2Database.h"
 #include "CLogin.h"
 #include "CDisplayView.h"
+#include "MainFrm.h"
 extern int user_flag;
 extern CString user_name;
 //CUserDlg
@@ -34,7 +35,6 @@ BEGIN_MESSAGE_MAP(CUserDlg, CFormView)
 
 	ON_BN_CLICKED(IDC_BUTTON1, &CUserDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CUserDlg::OnBnClickedButton2)
-	ON_BN_CLICKED(IDC_BUTTON3, &CUserDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 // CUserDlg 诊断
 
@@ -134,12 +134,3 @@ void CUserDlg::OnBnClickedButton2()
 	UpdateData(FALSE);
 }
 
-
-void CUserDlg::OnBnClickedButton3()
-{
-	// TODO: 在此添加控件通知处理程序代码
-
-
-	CLogin tmp;
-	tmp.DoModal();
-}

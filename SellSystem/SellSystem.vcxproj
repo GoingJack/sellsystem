@@ -190,6 +190,7 @@
     <ClInclude Include="CInfoDatabase.h" />
     <ClInclude Include="CLogin.h" />
     <ClInclude Include="Connect2Database.h" />
+    <ClInclude Include="COrderInfo.h" />
     <ClInclude Include="CSelectView.h" />
     <ClInclude Include="CSellerDeal.h" />
     <ClInclude Include="CShow.h" />
@@ -211,6 +212,7 @@
     <ClCompile Include="CInfoDatabase.cpp" />
     <ClCompile Include="CLogin.cpp" />
     <ClCompile Include="Connect2Database.cpp" />
+    <ClCompile Include="COrderInfo.cpp" />
     <ClCompile Include="CSelectView.cpp" />
     <ClCompile Include="CSellerDeal.cpp" />
     <ClCompile Include="CShow.cpp" />
@@ -240,6 +242,7 @@
     <Image Include="res\goods.ico" />
     <Image Include="res\icon1.ico" />
     <Image Include="res\main.ico" />
+    <Image Include="res\order.ico" />
     <Image Include="res\SellSystem.ico" />
     <Image Include="res\SellSystemDoc.ico" />
     <Image Include="res\user.ico" />

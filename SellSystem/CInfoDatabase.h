@@ -29,6 +29,7 @@ struct ordersystem//订单信息表
 	char Order_Date[20];
 	int Order_Status;
 	double Order_Totalprice;
+	char Order_dealer[20];//订单处理者的名字
 };
 class CInfoDatabase
 {
@@ -42,7 +43,7 @@ public:
 	list<msg> ls;//存储商品容器
 	list<ordersystem> order;//订单信息
 	list<msg> Info_commodity;//管理员查看消息容器
-	void ReadInfo_Order();
+	void ReadInfo_Order(int status);
 
 	void ReadInfo_Commodity();
 };

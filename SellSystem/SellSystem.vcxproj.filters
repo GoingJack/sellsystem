@@ -72,6 +72,9 @@
     <ClInclude Include="CShow.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="COrderInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SellSystem.cpp">
@@ -119,6 +122,9 @@
     <ClCompile Include="CShow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="COrderInfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SellSystem.rc">
@@ -156,6 +162,9 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\goodinfo.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\order.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

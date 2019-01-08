@@ -1,39 +1,10 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(ER.vcxproj, SaleSystem1.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
 cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
-  CAddC.cpp
-c:\users\高杰\source\repos\sellsystem\sellsystem\caddc.cpp(179): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\高杰\source\repos\sellsystem\sellsystem\caddc.cpp(187): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-c:\users\高杰\source\repos\sellsystem\sellsystem\caddc.cpp(215): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\caddc.cpp(229): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-  CDisplayView.cpp
-  CLogin.cpp
-  CSelectView.cpp
-  CSellerDeal.cpp
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(197): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(201): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(207): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(175): warning C4101: “showdata”: 未引用的局部变量
-  CShow.cpp
   CUserBuy.cpp
-c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(208): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(205): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(220): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(217): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
-c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(188): warning C4101: “row”: 未引用的局部变量
-c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(187): warning C4101: “res”: 未引用的局部变量
-  CUserDlg.cpp
-c:\users\高杰\source\repos\sellsystem\sellsystem\cuserdlg.cpp(90): warning C4101: “res”: 未引用的局部变量
-  MainFrm.cpp
-  SellSystem.cpp
-  SellSystemDoc.cpp
-  SellSystemView.cpp
-  正在生成代码...
-c:\users\高杰\source\repos\sellsystem\sellsystem\csellerdeal.cpp(51): warning C4717: “CSellerDeal::Dump”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(185): warning C4101: “row”: 未引用的局部变量
+c:\users\高杰\source\repos\sellsystem\sellsystem\cuserbuy.cpp(184): warning C4101: “res”: 未引用的局部变量
   SellSystem.vcxproj -> C:\Users\高杰\source\repos\SellSystem\Debug\SellSystem.exe
